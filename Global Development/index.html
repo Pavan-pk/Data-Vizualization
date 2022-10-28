@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Global Index</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+        <script src="https://d3js.org/d3.v7.min.js" charset="utf-8"></script>
+        <script src="js/main.js"></script>
+        <style>
+            .myContainer {
+                margin:auto;
+                width:1400px;
+            }
+            #graph_div{
+                float:left;
+                width:80%;
+                padding:10px;
+            }
+            #right_div {
+                width: 19%;
+                height: 660px;
+                float:right;
+                padding: 10px;
+            }
+            #right_element {
+                width:  100%;
+                margin: 0 0 24px 0;
+            }
+
+            svg {
+                width: 100%;
+                height: 640px;
+                background-color: white;
+                border: 1px solid lightgray;
+                border-radius: 3px;
+            }
+        </style>
+    </head>
+        <div class="myContainer">
+            <h3 class="text-center">Author: Pavan Kumar (pavanyyf@gmail.com)</h3>
+            <h3 class="text-center">Global Development</h3>
+            <div class = "myContainer">
+                <div id="graph_div" class="border border-dark rounded bg-light shadow-sm">
+                   <svg id="svg_graph"></svg>
+                </div>
+                <div id="right_div" class="border border-dark rounded bg-light shadow-sm">
+                    <div id="right_element">
+                        <div class="col-1" STYLE="font-weight:bold">Attribute: </div>
+                        <div class="col-3">
+                            <select id="select" style="width:240px" autocomplete="off">
+                                <option value="birth_rate">Birth Rate</option>
+                                <option value="death_rate">Death Rate</option>
+                                <option value="fert_rate">Fertility Rate</option>
+                                <option value="life_f">Life expectency at birth - Female</option>
+                                <option value="life_m">Life expectency at birth - Male</option>
+                                <option value="life_t">Life expectency at birth - Total</option>
+                                <option value="urban_pop_per">Urban Polulation Percentage</option>
+                                <option value="rural_pop_growth">Rural Population Growth</option>
+                                <option value="urban_pop_growth">Urban Population Growth</option>
+                                <option value="total_pop_growth">Total Population Growth</option>
+                            </select>
+                        </div>
+                    </div>
+                    <span STYLE="font-weight:bold">Regions:</span><br>
+                    <div id="right_element">
+                        <input type="checkbox" id="regions" name="EAP" value=0 autocomplete="off" checked>
+                        <label for="EAP">East Asia & Pacific</label><br>
+                        <input type="checkbox" id="regions" name="ECA" value=1 autocomplete="off">
+                        <label for="ECA">Europe & Central Asia</label><br>
+                        <input type="checkbox" id="regions" name="LAC" value=2 autocomplete="off">
+                        <label for="LAC">Latin America & Caribbean</label><br>
+                        <input type="checkbox" id="regions" name="MENA" value=3 autocomplete="off">
+                        <label for="MENA">Middle East & North Africa</label><br>
+                        <input type="checkbox" id="regions" name="NA" value=4 autocomplete="off">
+                        <label for="NA">North America</label><br>
+                        <input type="checkbox" id="regions" name="SA" value=5 autocomplete="off">
+                        <label for="SA">South Asia</label><br>
+                        <input type="checkbox" id="regions" name="SSA" value=6 autocomplete="off">
+                        <label for="SSA">Sub-Saharan Africa</label><br>
+                        <input type="radio" name="size" id="selectall" autocomplete="off" style="margin-top: 20px;">
+                        <label for="all">Select All</label><br>
+                        <input type="radio" name="size" id="selectnone" autocomplete="off">
+                        <label for="none">Deselect All</label><br>
+                    </div>
+                    <div id="right_element">
+                       <span STYLE="font-weight:bold">Opacity:</span><br> 
+                       <input type='range' id="slider" min='20' max='40' value = '20' step = "1" style="width: 100%" autocomplete="off">
+                    </div>
+                    <div id="right_element">
+                        <input type="button" id="play" value="Play / Animate" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end of the container div -->
+    </body>
+</html>
